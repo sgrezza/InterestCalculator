@@ -28,15 +28,15 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtFutureValue = New System.Windows.Forms.TextBox()
         Me.txtInterestRate = New System.Windows.Forms.TextBox()
-        Me.txtYears = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.radBronze = New System.Windows.Forms.RadioButton()
         Me.radSilver = New System.Windows.Forms.RadioButton()
         Me.radGold = New System.Windows.Forms.RadioButton()
         Me.listRequiredInvestment = New System.Windows.Forms.ListBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.cmbYears = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,16 +90,9 @@ Partial Class Form1
         Me.txtInterestRate.Size = New System.Drawing.Size(100, 31)
         Me.txtInterestRate.TabIndex = 5
         '
-        'txtYears
-        '
-        Me.txtYears.Location = New System.Drawing.Point(125, 223)
-        Me.txtYears.Name = "txtYears"
-        Me.txtYears.Size = New System.Drawing.Size(100, 31)
-        Me.txtYears.TabIndex = 6
-        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
+        Me.GroupBox1.Controls.Add(Me.radBronze)
         Me.GroupBox1.Controls.Add(Me.radSilver)
         Me.GroupBox1.Controls.Add(Me.radGold)
         Me.GroupBox1.Location = New System.Drawing.Point(271, 41)
@@ -109,16 +102,16 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Membership"
         '
-        'RadioButton3
+        'radBronze
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(41, 152)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(173, 29)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "RadioButton3"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.radBronze.AutoSize = True
+        Me.radBronze.Location = New System.Drawing.Point(41, 152)
+        Me.radBronze.Name = "radBronze"
+        Me.radBronze.Size = New System.Drawing.Size(111, 29)
+        Me.radBronze.TabIndex = 2
+        Me.radBronze.TabStop = True
+        Me.radBronze.Text = "Bronze"
+        Me.radBronze.UseVisualStyleBackColor = True
         '
         'radSilver
         '
@@ -155,7 +148,7 @@ Partial Class Form1
         '
         Me.btnCalculate.Location = New System.Drawing.Point(25, 572)
         Me.btnCalculate.Name = "btnCalculate"
-        Me.btnCalculate.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalculate.Size = New System.Drawing.Size(119, 51)
         Me.btnCalculate.TabIndex = 9
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
@@ -164,7 +157,7 @@ Partial Class Form1
         '
         Me.btnReset.Location = New System.Drawing.Point(150, 572)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.Size = New System.Drawing.Size(115, 51)
         Me.btnReset.TabIndex = 10
         Me.btnReset.Text = "Button2"
         Me.btnReset.UseVisualStyleBackColor = True
@@ -173,22 +166,31 @@ Partial Class Form1
         '
         Me.btnExit.Location = New System.Drawing.Point(271, 572)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.Size = New System.Drawing.Size(147, 51)
         Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "Button3"
         Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'cmbYears
+        '
+        Me.cmbYears.FormattingEnabled = True
+        Me.cmbYears.Items.AddRange(New Object() {"5", "10", "15", "20", "25", "30"})
+        Me.cmbYears.Location = New System.Drawing.Point(125, 223)
+        Me.cmbYears.Name = "cmbYears"
+        Me.cmbYears.Size = New System.Drawing.Size(121, 33)
+        Me.cmbYears.TabIndex = 12
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1243, 834)
+        Me.ClientSize = New System.Drawing.Size(657, 834)
+        Me.Controls.Add(Me.cmbYears)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.listRequiredInvestment)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.txtYears)
         Me.Controls.Add(Me.txtInterestRate)
         Me.Controls.Add(Me.txtFutureValue)
         Me.Controls.Add(Me.Label4)
@@ -210,13 +212,13 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents txtFutureValue As TextBox
     Friend WithEvents txtInterestRate As TextBox
-    Friend WithEvents txtYears As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents radBronze As RadioButton
     Friend WithEvents radSilver As RadioButton
     Friend WithEvents radGold As RadioButton
     Friend WithEvents listRequiredInvestment As ListBox
     Friend WithEvents btnCalculate As Button
     Friend WithEvents btnReset As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents cmbYears As ComboBox
 End Class
